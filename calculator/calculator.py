@@ -6,13 +6,28 @@ root.title('Calculatorer')
 e = Entry(root, width=40, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
+
+
 def button_click(num):
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(num))
 
-def clear():
+def func_clear():
     e.delete(0, END)
+
+def func_add():
+    num1 = e.get()
+    global f_num
+    f_num = int(num1)
+    e.delete(0, END)
+
+def func_equal():
+    second_num = e.get()
+    e.delete(0, END)
+    e.insert(0, f_num + int(second_num))
+
+
 
 # define buttons
 button1 = Button(root, text='1', padx=40, pady=20, command=lambda: button_click(1))
@@ -25,9 +40,9 @@ button7 = Button(root, text='7', padx=40, pady=20, command=lambda: button_click(
 button8 = Button(root, text='8', padx=40, pady=20, command=lambda: button_click(8))
 button9 = Button(root, text='9', padx=40, pady=20, command=lambda: button_click(9))
 button0 = Button(root, text='0', padx=40, pady=20, command=lambda: button_click(0))
-button_addition = Button(root, text='+', padx=39, pady=20, command=lambda: button_click())
-button_equal = Button(root, text='=', padx=91, pady=20, command=lambda: button_click())
-button_clear = Button(root, text='Clear', padx=79, pady=20, command=clear)
+button_addition = Button(root, text='+', padx=39, pady=20, command=func_add)
+button_equal = Button(root, text='=', padx=91, pady=20, command=func_equal)
+button_clear = Button(root, text='Clear', padx=79, pady=20, command=func_clear)
 
 # put buttons on screen
 button1.grid(row=3, column=0)
