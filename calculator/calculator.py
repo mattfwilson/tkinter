@@ -3,31 +3,27 @@ from tkinter import *
 root = Tk()
 root.title('Calculatorer')
 
-e = Entry(root, width=40, borderwidth=5)
-e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
-
-
+entry = Entry(root, width=40, borderwidth=5)
+entry.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 def button_click(num):
-    current = e.get()
-    e.delete(0, END)
-    e.insert(0, str(current) + str(num))
+    current = entry.get()
+    entry.delete(0, END)
+    entry.insert(0, str(current) + str(num))
 
 def func_clear():
-    e.delete(0, END)
+    entry.delete(0, END)
 
 def func_add():
-    num1 = e.get()
+    num1 = entry.get()
     global f_num
     f_num = int(num1)
-    e.delete(0, END)
+    entry.delete(0, END)
 
 def func_equal():
-    second_num = e.get()
-    e.delete(0, END)
-    e.insert(0, f_num + int(second_num))
-
-
+    second_num = entry.get()
+    entry.delete(0, END)
+    entry.insert(0, f_num + int(second_num))
 
 # define buttons
 button1 = Button(root, text='1', padx=40, pady=20, command=lambda: button_click(1))
