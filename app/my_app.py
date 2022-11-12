@@ -5,7 +5,7 @@ root = Tk()
 root.title('My First App')
 root.iconbitmap('smile.ico')
 
-my_img = ImageTk.PhotoImage(Image.open('matt.png'))
+my_img = ImageTk.PhotoImage(Image.open('images/matt.png'))
 my_label = Label(image=my_img)
 my_label.pack()
 
