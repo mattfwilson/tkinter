@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import ImageTk,Image
 
 root = Tk()
-root.title('My First App')
+root.title('The App of Matt')
 root.iconbitmap('smile.ico')
 
 my_img = ImageTk.PhotoImage(Image.open('images/matt.png'))
