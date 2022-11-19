@@ -15,7 +15,7 @@ def calc_int():
     print(f'Your principal is: {principal}.')
     print(f'Your interest rate is: {interest}.')
 
-    principal.set('')
+    base_principal.set('')
     int_rate.set('')
 
 principal_label = tk.Label(root, text='Principal Amount ($):', anchor='w')
