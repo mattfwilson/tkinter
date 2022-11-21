@@ -8,6 +8,9 @@ root.geometry('350x100')
 base_principal = 0
 int_rate = tk.IntVar()
 
+txt = tk.Entry(root)
+txt.pack()
+
 def btn_cmd(obj):
 
     #use global variable
@@ -33,15 +36,11 @@ def calc_int():
     int_rate.set('')
 
 principal_num = tk.StringVar()
-principal_label = tk.Label(root, text='Principal Amount ($):', anchor='w')
-principal_entry = tk.Entry(root, textvariable=base_principal,)
+principal_entry = tk.Entry(root, textvariable=principal_num)
 principal_entry.pack()
 
-interest_label = tk.Label(root, text='Interest Rate (%):', anchor='w')
-interest_entry = tk.Entry(root, textvariable=int_rate)
-
-submit_button = tk.Button(root, text="Calculate", command=lambda obj = principal_entry : btn_cmd(obj))
-submit_button.pack()
+submit_btn = tk.Button(root, text="Calculate", command=lambda obj = txt : btn_cmd(obj))
+submit_btn.pack()
 
 # principal_label.grid(row=0, column=0)
 # principal_entry.grid(row=0, column=1)
