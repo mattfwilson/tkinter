@@ -7,13 +7,13 @@ def btn_cmd(obj, labelText):
 
     global principal
 
-    if obj.get() > 10:
+    if int(obj.get()) > 10:
         print("Principal: " + str(principal))
         principal = obj.get()
         labelText.set(obj.get())
-        print("Entry: " + obj.get())
+        print(f'Entry {obj.get()} is greater than 10!')
     else:
-        print('That is a low number...')
+        print(f'Entry {obj.get()} is lower than 10...')
 
 def main():
 
