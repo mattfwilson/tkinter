@@ -1,7 +1,7 @@
 import customtkinter as ctk
 
 ctk.set_appearance_mode('dark')
-ctk.set_default_color_theme('dark-blue')
+ctk.set_default_color_theme('green')
 
 root = ctk.CTk()
 root.geometry('500x350')
@@ -12,8 +12,8 @@ def login():
 frame = ctk.CTkFrame(master=root)
 frame.pack(pady=20, padx=60, fill='both', expand='True')
 
-label = ctk.CTkLabel(master=frame, text='Login System', text_font=('Roboto', 24))
-label.pack(pady=12, padyx=10)
+label = ctk.CTkLabel(master=frame, text='Login System')
+label.pack(pady=12, padx=10)
 
 entry1 = ctk.CTkEntry(master=frame, placeholder_text='Username')
 entry1.pack(pady=12, padx=10)
