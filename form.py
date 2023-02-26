@@ -1,32 +1,21 @@
 import tkinter as tk
  
-root = Tk()
+root = tk.Tk()
+root.geometry("300x170")
+
+principal_input = tk.Text(root, height = 1, width = 25)
+l = tk.Label(root, text = "Principal amount:")
+l.config(font =("Courier", 12))
  
-# specify size of window.
-root.geometry("250x170")
+principal = 0
  
-# Create text widget and specify size.
-T = Text(root, height = 5, width = 52)
- 
-# Create label
-l = Label(root, text = "Fact of the Day")
-l.config(font =("Courier", 14))
- 
-Fact = """A man can be arrested in
-Italy for wearing a skirt in public."""
- 
-# Create button for next text.
-b1 = Button(root, text = "Next", )
- 
-# Create an Exit button.
-b2 = Button(root, text = "Exit",
-            command = root.destroy)
+b1 = tk.Button(root, text = "Submit",)
+b2 = tk.Button(root, text = "Exit", command = root.destroy)
  
 l.pack()
-T.pack()
+principal_input.pack()
 b1.pack()
 b2.pack()
  
-T.insert(tk.END, Fact)
- 
+principal_input.insert(tk.END, principal)
 tk.mainloop()
