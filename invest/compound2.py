@@ -1,19 +1,18 @@
 import tkinter as tk
 
 principal = 0
-interest = 0
 
 def btn_cmd(obj, labelText):
 
     global principal
 
-    if int(obj.get()) > 10:
+    if int(obj.get()) > 10000:
         print("Principal: " + str(principal))
         principal = obj.get()
         labelText.set(obj.get())
-        print(f'Entry {obj.get()} is greater than 10!')
+        print(f'You have {obj.get()} in principal and it is greater than 10000!')
     else:
-        print(f'Entry {obj.get()} is lower than 10...')
+        print(f'You have {obj.get()} in principal and it is lower than 10000...')
 
 def main():
 
